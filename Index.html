@@ -1,11 +1,13 @@
-<!-- Zac McDaniel, 7/12/2026 -->
+<!-- Zac McDaniel, 8/5/2026 
+     Assignment 4.1 - Event Driven Programming-->
  <!--DOCTYPE this is the first tag on the page and it tells the browser that this is an HTML5 page -->
  <!DOCTYPE html>
- <!-- the html tag goes next -->
+ <!-- the html tag wraps the entire webpage -->
  <html>
     
     <!-- the head section has info for the browser and search engine  -->
      <head>
+      <!-- Title shown in the browser tab -->
        <title>CSC102 Home Page</title> 
 
        <!--add a link to my css file-->
@@ -14,21 +16,39 @@
 
      <!-- the body section holds the text and images that we want to show to the user -->
       <body>
+
+        <!-- Main heading at the top of the page -->
         <h1>Welcome to my CSC102 Home Page</h1>
 
-        <!--create a nav section to hold the menu-->
+        <!-- Navigation menu on the left side of the page -->
        <nav>
+
+          <!--Link to the home page -->
           <a href="Index.html">Home</a>
+          <!-- line break -->
           <br>
+          <!--Link to the boards page -->
           <a href="Boards.html">Boards</a>
+          <br> <br>
+
+          <!-- Start and stop buttons-->
+          <button id="startBtn" onclick="startMove()">Start</button>  <br>        
+          <button id="stopBtn" onclick="stopMove()" disabled>Stop</button> <br>
+
+          <!--Message area updated using innerHTML (required by assignment)
+            No alerts allowed-->
+          <div id="messageBox"></div>
        </nav>
        
        <!-- p is for paragraph tag; has spacing around it by default -->
         <p>
-            <!-- img is the image tag -->
+            <!-- ID is required so JavaScript can access and move it -->
             <img class="responsive" id="memeImage" src="3D printing meme.jpg" alt="3D Print meme"  >
               
-        </p>
+        </p>        
+
+        <!--Load external JavaScript file-->
+        <script src="script.js"></script>
 
         <!--add a footer to my body with my name and school info-->
         <footer>

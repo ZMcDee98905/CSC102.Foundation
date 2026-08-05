@@ -9,11 +9,13 @@ selector{
 
 body{
     background-color: #04a86f;
-    color: #f7f9f7;      
+    color: #000200; 
+    overflow: hidden;  /* Prevents meme image from scrolling off-screen*/    
 }
 
 nav{
-    height: 600px;
+    height: auto;
+    min-height: 150px;
     width: 200px;
     float: left;
     padding: 5px;
@@ -22,27 +24,47 @@ nav{
     color: #eff1ef;
     text-align: center;
     font-weight: bolder;
+    /* clean border+ rounded corners */
+    border: 3px solid #000300;
+    border-radius: 10px;
+    /*subtle shadow for depth*/
+    box-shadow: 0px, 0px, 10px, rgba(0, 0, 0, 0.35);
    
-}
-
-footer{
-    text-align: center;
-    font-weight: italic;
-    margin-right: 200px;
-    padding-top: 30px;
-}
-
-#memeImage{   
-    width: 900px;
-    max-width: 100%;
-    height: 600px;
-    margin-right: 200px;
-    margin-top: 20px;
-    border-radius: 16px;
 }
 
 h1{
     text-align: center;
-    color: #eff1ef;
+    color: #000300;
     font-family: 'Courier New', Courier, monospace;
 }
+
+footer{
+    position: fixed;         /* fixed position */
+    bottom: 20px;          /* stick to botttom */
+    left: 20px;            /*align under nav */
+    text-align: left;      /* no centering */
+    font-weight: italic;
+    color: #000300;
+    /* background for readability */
+    background-color: rgba(4, 168, 111, 0.35);
+    /* padding for spacing */
+    padding: 10px, 15px;
+    /* rounded corners for aesthetics */
+    border-radius: 8px;
+    /* subtle shadow for depth */
+    box-shadow: 0px, 0px, 10px, rgba(0, 0, 0, 0.35);
+   
+}
+
+/* Changed memeImage to be positioned absolute so that movement is not blocked */
+#memeImage{   
+    width: 400px;
+    max-width: 100%;
+    height: 225px;
+    border-radius: 16px;
+    position: absolute;
+    left: 250px;  /* Starting X position - moves right of nav */
+    top: 150px;   /* Starting Y position - moves below header */
+    z-index: -1;  /* sends image behind other elements */
+}
+
