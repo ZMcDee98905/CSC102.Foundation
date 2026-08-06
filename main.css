@@ -48,6 +48,13 @@ h1{
     font-family: 'Courier New', Courier, monospace;
 }
 
+#startHint {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
 footer{
     position: fixed;         /* fixed position */
     bottom: 20px;          /* stick to botttom */

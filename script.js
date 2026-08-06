@@ -27,7 +27,8 @@ function startMove() {
     document.getElementById("stopBtn").disabled = false;
 
     // Update message using innerHTML (required by assignment)
-    document.getElementById("messageBox").innerHTML = "Meme is moving!";
+    document.getElementById("messageBox").innerHTML =
+     "Meme is moving! To stop music, hit Stop.";
 
     // Mark animation as running
     animationRunning = true;
@@ -52,7 +53,10 @@ function stopMove() {
     // Stop the animation loop
     animationRunning = false;
 
-    // Update message using innerHTML (required by assignment)
+    //Stop the audio
+    stopAudio();
+
+    // Update message using innerHTML 
     document.getElementById("messageBox").innerHTML = "Meme stopped.";
 
 }
@@ -120,3 +124,18 @@ function moveMeme(timestamp) {
         requestAnimationFrame(moveMeme);
     }
 }
+
+// Function to stop audio when navigating to another page
+function stopAudio() {
+    let audio = document.getElementById("guitarAudio");
+    if (audio) {
+        audio.pause();
+        audio.currentTime = 0; // Reset to start
+    }
+}
+
+function restartAudio() {
+    let audio = document.getElementById("guitarAudio");
+    audio.muted = false; // Unmute the audio
+    audio.play(); // Play the audio
+}  

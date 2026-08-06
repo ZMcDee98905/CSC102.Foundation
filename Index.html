@@ -21,32 +21,43 @@
           <nav>
 
             <!--Link to the home page -->
-           <a href="Index.html">Home</a>
+           <a href="Index.html" onclick="restartAudio()">Home</a>
            <!-- line break -->
            <br>
            <!--Link to the boards page -->
-           <a href="Boards.html">Boards</a>
+           <a href="Boards.html" onclick="stopAudio(); ">Boards</a>
            <br> <br>
 
            <!-- Start and stop buttons-->
-           <button id="startBtn" onclick="startMove()">Start</button>  <br>        
-           <button id="stopBtn" onclick="stopMove()" disabled>Stop</button> <br>
+           <button id="startBtn" onclick= "restartAudio(); startMove();">Start</button>  <br>        
+           <button id="stopBtn"  onclick= "restartAudio(); stopMove()" disabled>Stop</button> <br>
 
            <!--Message area updated using innerHTML (required by assignment)
             No alerts allowed-->
            <div id="messageBox"></div>
-         </nav>
+
+           <!-- add autoplay audiowith source -->
+           <audio id="guitarAudio" autoplay loop >
+             <source src="guitar_loop.mp3" type="audio/mpeg">
+           </audio>
+
+          </nav>
 
          <main>
 
          <!-- Main heading at the top of the page -->
          <h1>Welcome to my CSC102 Home Page</h1>
+
+         <p id="startHint">Click the Start button to start the meme moving and see what happens."</p>
        
          <!-- p is for paragraph tag; has spacing around it by default -->
          <p>
             <!-- ID is required so JavaScript can access and move it -->
-            <img class="responsive" id="memeImage" src="3D printing meme.jpg" alt="3D Print meme"  >
+            <img class="responsive" id="memeImage" 
+            src="3D printing meme.jpg" alt="3D Print meme" 
+            onclick= "restartAudio(); startMove()">
               
+          
         </p> 
         </main>       
 
