@@ -1,5 +1,5 @@
-// Zac McDaniel, 8/5/2026
-// Assignment 4.1 - Event Driven Programming
+// Zac McDaniel, 8/6/2026
+// Assignment 6.2 - Putting it all together
 // This script controls the Start/Stop buttons and moves the meme img around the page.
 
 // Global variable to hold the interval ID for movement
@@ -139,3 +139,30 @@ function restartAudio() {
     audio.muted = false; // Unmute the audio
     audio.play(); // Play the audio
 }  
+
+// Start button
+document.getElementById("startBtn").onclick = function() {
+    restartAudio();
+    startMove();
+};
+
+// Stop button
+document.getElementById("stopBtn").onclick = function() {
+    stopMove();
+};
+
+//Meme image click
+document.getElementById("memeImage").onclick = function() {
+    restartAudio();
+    startMove();
+};
+
+// Boards link stops audio before navigating
+document.getElementById("boardsLink").onclick = function() {
+    stopAudio();
+};
+
+// Home link blur to remove highlight
+document.getElementById("homeLink").onclick = function() {
+    this.blur(); // Remove focus from the link
+}

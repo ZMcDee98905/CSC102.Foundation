@@ -1,5 +1,5 @@
-<!-- Zac McDaniel, 8/5/2026 
-     Assignment 4.1 - Event Driven Programming-->
+<!-- Zac McDaniel, 8/6/2026 
+     Assignment 6.2 - Putting it all together-->
  <!--DOCTYPE this is the first tag on the page and it tells the browser that this is an HTML5 page -->
  <!DOCTYPE html>
  <!-- the html tag wraps the entire webpage -->
@@ -21,23 +21,24 @@
           <nav>
 
             <!--Link to the home page -->
-           <a href="Index.html" onclick="restartAudio()">Home</a>
+           <a id="homeLink" href="Index.html">Home</a>
+
            <!-- line break -->
            <br>
            <!--Link to the boards page -->
-           <a href="Boards.html" onclick="stopAudio(); ">Boards</a>
+           <a id="boardsLink" href="Boards.html"; ">Boards</a>
            <br> <br>
 
            <!-- Start and stop buttons-->
-           <button id="startBtn" onclick= "restartAudio(); startMove();">Start</button>  <br>        
-           <button id="stopBtn"  onclick= "restartAudio(); stopMove()" disabled>Stop</button> <br>
+           <button id="startBtn">Start</button>   <br>        
+           <button id="stopBtn">Stop</button> <br>
 
            <!--Message area updated using innerHTML (required by assignment)
             No alerts allowed-->
            <div id="messageBox"></div>
 
            <!-- add autoplay audiowith source -->
-           <audio id="guitarAudio" autoplay loop >
+           <audio id="guitarAudio" loop >
              <source src="guitar_loop.mp3" type="audio/mpeg">
            </audio>
 
@@ -54,11 +55,9 @@
          <p>
             <!-- ID is required so JavaScript can access and move it -->
             <img class="responsive" id="memeImage" 
-            src="3D printing meme.jpg" alt="3D Print meme" 
-            onclick= "restartAudio(); startMove()">
-              
+            src="3D printing meme.jpg" alt="3D Print meme">         
+         </p>              
           
-        </p> 
         </main>       
 
         <!--Load external JavaScript file-->
