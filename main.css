@@ -7,21 +7,29 @@ selector{
 }
 */
 
+/* body styling */
 body{
     background-color: #04a86f;
     color: #000200; 
     overflow: hidden;  /* Prevents meme image from scrolling off-screen*/   
-     display: flex;
+    display: flex;
     flex-direction: row;   /* nav on the left, main on the right */
     align-items: flex-start; 
 }
 
+/* Remove default focus outlines */
 nav a:focus
 nav button:focus {
     outline: none;  /* removes the default focus outline */
     box-shadow: none;  /* removes the default focus shadow */
 } 
 
+/* Unified shadow theme */
+:root {
+    --shadow-color: rgba(4, 168, 111, 0.35) /* my green glow */
+}
+
+/* Navigation Panel */
 nav{
     height: auto;
     min-height: 150px;
@@ -37,25 +45,27 @@ nav{
     border: 3px solid #000300;
     border-radius: 10px;
     /*subtle shadow for depth*/
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
-    outline: 0px 0px 10px rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 0px 12px var(--shadow-color);
+    
     
    
 }
 
+/* Main content */
 main {
     max-width: 700px;   /* keeps your text in a clean column */
     margin: 0 auto;     /* centers the whole block */
     padding: 20px;
 }
 
-
+/* Header content */
 h1{
     text-align: center;
     color: #000300;
     font-family: 'Courier New', Courier, monospace;
 }
 
+/* message dispayed under header to guide the user to press Start */
 #startHint {
     text-align: center;
     font-size: 20px;
@@ -72,16 +82,16 @@ footer{
     color: #000300;
     /* background for readability */
     background-color: rgba(4, 168, 111, 0.35);
-    /* padding for spacing */
-    padding: 10px, 15px;
+    /* Fixed padding for spacing (commas removed) */
+    padding: 10px 15px;
     /* rounded corners for aesthetics */
     border-radius: 8px;
     /* subtle shadow for depth */
-    box-shadow: 0px, 0px, 10px, rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 0px 10px var(--shadow-color);
    
 }
 
-/* Changed memeImage to be positioned absolute so that movement is not blocked */
+/* Meme image  */
 #memeImage{   
     width: 400px;
     max-width: 100%;
@@ -91,5 +101,47 @@ footer{
     left: 250px;  /* Starting X position - moves right of nav */
     top: 150px;   /* Starting Y position - moves below header */
     z-index: -1;  /* sends image behind other elements */
+    /*unified shadow */
+    box-shadow: 0px 0px 12px var(--shadow-color);
 }
 
+/* Styling for my Table */
+table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto;      /* centers the table horizontally */
+    margin-top: 40px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    color: #000300;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 12px var(--shadow-color);
+}
+
+/* Header cells */
+th {
+    background-color: #027a52;
+    color: #ffffff;
+    padding: 14px;
+    font-size: 18px;
+    border-bottom: 2px solid #015c3d;
+}
+
+/* Regular cells */
+td {
+    padding: 12px;
+    font-size: 16px;
+    border-bottom: 1px solid #cccccc;
+}
+
+/* Alternating row colors */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect */
+tr:hover {
+    background-color: #d9f5e8;
+    transition: 0.2s;
+}
