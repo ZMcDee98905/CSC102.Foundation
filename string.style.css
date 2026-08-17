@@ -1,0 +1,102 @@
+/* Zachary McDaniel 8/16/2026
+   Description: CSS file for styling the
+    user input validation web page */
+    
+/* Comment: Set page background and text styling */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    background-image: url("hand-on-the-window.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    font-family: "Segoe UI Emoji", "Segoe UI Symbol",
+       "Noto Color Emoji", Arial, sans-serif;
+    text-align: center;
+    padding-top: 40px;
+}
+
+
+/* Navigation Panel */
+nav{
+    height: auto;
+    min-height: 150px;
+    width: 200px;
+    float: left;
+    padding: 5px;
+    line-height: 30px;
+    background-color: rgba(204, 168, 240, 0.55);
+    backdrop-filter: blur(4px);
+    color: white !important;
+    text-decoration:  none;
+    text-align: center;
+    font-weight: bolder;
+    /* clean border+ rounded corners */
+    border: 3px solid #000300;
+    border-radius: 10px;
+    /*subtle shadow for depth*/
+    box-shadow: 0px 0px 12px var(--shadow-color);
+}
+
+/* Comment: Add a subtle overlay to improve text readability */
+.container {
+    background-color: rgba(0, 0, 0, 0.10); /* barely tinted */
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Comment: Input box styling */
+input {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: none;
+}
+
+/* Comment: Submit button styling */
+#submitBtn {
+    margin-top: 20px;
+    padding: 12px;
+    width: 95%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Comment: Message output styling */
+#message {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Comment: Image styling */
+img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Footer styling */
+footer {
+    position: fixed;        
+    bottom: 20px;           
+    left: 20px;              
+    text-align: left;        
+    font-style: italic;      
+    color: white;           
+    background-color: rgba(128, 0, 255, 0.55);
+    padding: 10px 15px;     
+    border-radius: 8px;      
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+}
