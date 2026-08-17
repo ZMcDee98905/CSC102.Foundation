@@ -1,0 +1,86 @@
+<!-- Zac McDaniel, 8-5-2026-->
+<!--Assignement 5.1 - Palindrome Checker-->
+
+<!--The type of document-->
+<!DOCTYPE html>
+<html>
+
+    <!--The head of the document-->
+    <head>
+
+        <!--The title of the document that is seen on the browser tab-->
+        <title>Palindrome Checker</title>
+        <!--The character encoding of the document-->
+        <meta charset="UTF-8">
+        <!--The stylesheet for the document-->
+        <link rel="stylesheet" href="main.css">
+
+    </head>
+
+    <!--The body of the document-->
+    <body>
+         <!-- Navigation Panel
+             This allows the user to return to my other pages
+             required for good user experience and consistency
+             across my site-->
+         <nav>
+           <!--Link to the home page -->
+           <a id="homeLink" href="Index.html">Home</a>
+           <br>
+           <!--Link to the boards page -->
+           <a id="boardsLink" href="Boards.html">Boards</a>
+           <br>
+           <!-- Link to my Game page -->
+           <a id="gameLink" href="Game.html">Game</a>
+           <br>
+           <!-- Link to my Strings page -->
+           <a id="stringsLink" href="Strings.html">Strings</a>
+           <br>
+           <!-- Link to my Palindrome page -->
+           <a id="palLink" href="palindrome.html">Palindrome</a>
+           <br>
+           <!-- Link to my tables page -->
+           <a id="tablesLink" href="Table.html">Table</a>
+           <br>
+         </nav>
+
+         <main>
+         <!--The main heading of the document-->
+         <h1>Palindrome Checker</h1>
+        
+         <!-- what im initially asking the user to do -->
+         <p> Enter a word or phrase to check if it's a palindrome.</p>
+
+         <!-- Output area (required: innerHTML)-->
+         <div id="resultBox"></div>
+         
+         <!--Form + Submit ( required: submit only, no event listeners)-->
+         <form id="palForm">
+            <!-- Text input  -->
+            <input type="text" id="userInput" placeholder="Enter your word or phrase here..." required>
+
+            <!--Submit button-->
+            <input type="submit" value="Check">
+         </form>
+
+        <!-- Button to allow another word/phrase to be checked -->
+        <button id="againBtn" style="display: none;">Check Another</button>
+
+        <!--External JavaScript file-->
+        <script src="palScript.js"></script>
+      </main>
+      
+      <!--add a footer to my body with my name and school info-->
+        <footer>
+          Zachary McDaniel<br>
+          University of Advancing Technology<br>          
+          2625 W Baseline Rd<br>
+          Tempe, AZ 85283<br>
+          3D Maker and Fabrication Degree<br>
+        </footer>
+    </body>
+</html>
+
+
+
+
