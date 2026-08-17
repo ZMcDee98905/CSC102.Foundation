@@ -145,3 +145,42 @@ tr:hover {
     background-color: #d9f5e8;
     transition: 0.2s;
 }
+
+/* Styled result box */
+#result-box {
+    background-color: #333;
+    border: 1px solid #f40707;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 22px;
+}
+
+/* Input field styling */
+input[type="text"] {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #f40707;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+/* Button styling */
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #f40707;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+input[type="submit"]:hover,
+#againBtn:hover {
+    background-color: #19eb3c; 
+    outline: none;
+    border-color: #f40707;
+}
