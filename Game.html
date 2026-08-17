@@ -1,0 +1,72 @@
+<!--Zachary McDaniel, 8/16/2026-->
+<!--tells browser this is a HTML5 document-->
+<!DOCTYPE html>
+
+<!--html wraps up everything in the entire webpage-->
+<html>
+
+<!-- This is the header section, it contains metadata about the page -->
+<head>
+    <!--sets the title that appears on the web brower tab-->
+    <title>Even or Odd Duel</title>
+
+    <!--Link to external CSS file -->
+    <link rel="stylesheet" href="main.style.css">
+</head>
+
+<!-- This is the main content area of the page, that is visable on the page-->
+<body>
+    <main>
+        <nav>
+
+          <!--Link to the home page -->
+           <a id="memeLink" href="Index.html">Meme</a>
+           <br>
+           <!--Link to the boards page -->
+           <a id="boardsLink" href="Boards.html">Boards</a>
+           <br> 
+           <!-- Link to my Game page -->
+            <a id="gameLink" href="Game.html">Game</a>
+            <br>
+           <!-- Link to my Strings page -->
+            <a id="stringsLink" href="Strings.html">Strings</a>
+           <br>
+           <!-- Link to my Palindrome page -->
+            <a id="palLink" href="palindrome.html">Palindrome</a>
+            <br>
+           <!-- Link to my tables page -->
+           <a id="tablesLink" href="Table.html">Table</a>
+           <br>
+        </nav>
+
+     <!-- Title for the game -->
+     <h1>Even or Odd Duel</h1>
+
+     <!-- Form required by assignment -->
+     <!-- User enters a number, and the game compares it to a random number -->
+     <form onsubmit="runGame(); return false;">
+        <!-- Input field for the user's number -->
+        <label>Enter a number:</label>
+        <input type="number" id="userNumber">
+
+        <!-- Submit button that triggers the game function -->
+        <input type="submit" value="Play Duel">
+     </form>
+
+     <!-- Area where results will be printed using innerHTML -->
+     <p id="results"></p>
+
+     <!-- Link to external JavaScript file (required by assignment) -->
+     <script src="code.js"></script>
+    </main>
+
+     <!--add a footer to my body with my name and school info-->
+        <footer>
+          Zachary McDaniel<br>
+          University of Advancing Technology<br>          
+          2625 W Baseline Rd<br>
+          Tempe, AZ 85283<br>
+          3D Maker and Fabrication Degree<br>
+        </footer>
+</body>
+</html>
