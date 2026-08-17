@@ -1,0 +1,88 @@
+<!--Zachary McDaniel, Date: 8/16/2026-->
+<!-- Assignment 3.2 - User Input Validation
+ CSC102 - Strings.html-->
+
+ <!DOCTYPE html>
+ <html>
+    <!-- The title of my page that is seen in the tab of the browser-->
+    <head>
+        <!-- System provided metadata: descibes user's open edge tabs-->
+        <meta charset="UTF-8">
+        
+        <!-- Comment: setting page title-->
+        <title>Strings Assignment</title>  
+        
+        <!-- Comment: Link external CSS file -->
+        <link rel="stylesheet" href="string.style.css">
+
+    </head>
+
+    <body>
+         <nav>
+
+            <!--Link to the home page -->
+           <a id="homeLink" href="Index.html">Home</a>
+           <br>
+           <!--Link to the boards page -->
+           <a id="boardsLink" href="Boards.html">Boards</a>
+           <br> 
+           <!-- Link to my Game page -->
+           <a id="gameLink" href="Game.html">Game</a>
+           <br>
+           <!-- Link to my Strings page -->
+           <a id="stringsLink" href="Strings.html">Strings</a>
+           <br>
+           <!-- Link to my Palindrome page -->
+           <a id="palLink" href="palindrome.html">Palindrome</a>
+           <br>
+           <!-- Link to my tables page -->
+           <a id="tablesLink" href="Table.html">Table</a>
+           <br>
+
+         </nav>
+
+         <main>
+
+           <!-- Comment main container for layout -->
+           <div class="container">
+
+              <!-- Comment: Page header-->
+             <h1 id="headerText">Welcome to the Secret Message Portal</h1>
+                          
+             <!-- Comment: All inputs must be inside one form -->
+             <form id="stringForm" onsubmit="return validateForm()">
+
+               <!-- Comment: First name input -->
+               <input type="text" id="firstName" placeholder="Enter First Name"> <br>
+
+               <!-- Comment: Last name input -->
+               <input type="text" id="lastName" placeholder="Enter Last Name"> <br>
+
+               <!-- Comment: Zip code input -->
+               <input type="text" id="zipCode" placeholder="Enter 5 Digit Zip Code"> <br> <br>
+
+               <!-- Comment: Submit button -->
+               <input type="submit" id="submitBtn" value="Reveal Secret Message">
+
+             </form>
+
+              <!-- Comment: Area where validation messages and secret message will appear -->
+             <div id="message"></div>
+
+           </div>
+         
+
+             <!-- Comment: Link external JavaScript file -->
+              <script src="strings.javascript.js"></script>
+          </main> 
+          
+           <!--add a footer to my body with my name and school info-->
+        <footer>
+          Zachary McDaniel<br>
+          University of Advancing Technology<br>          
+          2625 W Baseline Rd<br>
+          Tempe, AZ 85283<br>
+          3D Maker and Fabrication Degree<br>
+        </footer>
+    </body>
+ </html>
