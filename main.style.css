@@ -1,0 +1,96 @@
+/* 
+Zachary McDaniel, 8/16/2026
+main.style.css – Styling for Even or Odd Duel game
+This file controls the layout, colors, and formatting of the webpage.
+*/
+
+/*
+declaration block:
+
+selector{
+    property: value;
+    property2: value;
+}
+*/
+
+/* 
+The body selector styles the entire page.
+Here I set the background color, text color, and center all content.
+*/
+body{
+    background-color: #04a86f;
+    color: #f7f9f7;
+    text-align: center; /* centers text and inline elements */
+}
+
+/* Navigation Panel */
+nav{
+    height: auto;
+    min-height: 150px;
+    width: 200px;
+    float: left;
+    padding: 5px;
+    line-height: 30px;
+    background-color: #04a86f;
+    color: #eff1ef;
+    text-align: center;
+    font-weight: bolder;
+    /* clean border+ rounded corners */
+    border: 3px solid #000300;
+    border-radius: 10px;
+    /*subtle shadow for depth*/
+    box-shadow: 0px 0px 12px var(--shadow-color);
+    
+    
+   
+}
+
+/* footer styling */
+footer{
+    position: fixed;         /* fixed position */
+    bottom: 20px;          /* stick to botttom */
+    left: 20px;            /*align under nav */
+    text-align: left;      /* no centering */
+    font-weight: italic;
+    color: #000300;
+    /* background for readability */
+    background-color: rgba(4, 168, 111, 0.35);
+    /* Fixed padding for spacing (commas removed) */
+    padding: 10px 15px;
+    /* rounded corners for aesthetics */
+    border-radius: 8px;
+    /* subtle shadow for depth */
+    box-shadow: 0px 0px 10px var(--shadow-color);
+   
+}
+
+/* 
+#memeImage styles an image if used.
+Sets size, spacing, and rounded corners.
+*/
+#memeImage{   
+    width: 900px;
+    max-width: 100%;
+    height: 600px;
+    margin-right: 200px;
+    margin-top: 20px;
+    border-radius: 16px;
+}
+
+/* 
+Form styling.
+Inline-block allows the form to be centered inside the body.
+*/
+form {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* 
+Results paragraph styling.
+Adds spacing and increases font size for readability.
+*/
+#results {
+    margin-top: 20px;
+    font-size: 20px;
+}
