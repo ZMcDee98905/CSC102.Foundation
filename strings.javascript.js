@@ -1,46 +1,54 @@
-// Comment: Zachary McDaniel Date: 7/28/2026
+// Zachary McDaniel Date: 8/17/2026
 
-// Comment: Main validation function triggered by form submit
+// Strings: Main validation function triggered by form submit
 
 function validateForm() {
 
-    // Comment: Get first  and last name
+    // Get first  and last name
     let first = document.getElementById("firstName").value;
     
     let last = document.getElementById("lastName").value;
 
     // Check for missing names
     if (first.trim() === "" || last.trim() === "") {
-        alert("Invalid Input! Please enter BOTH first and last name.");
+        // If not input will give alert in innerHTML 
+        document.getElementById("message").innerHTML = 
+           "First name and Last name are required";
+
         return false;
     }
 
-    // Comment: Combine names with a space
+    // Combine names with a space
     let fullName = first + " " + last;
 
-     // Comment: Validate full name length
+     // Validate full name length
      if (fullName.length > 20) {
-        alert("Invalid Input! Your full name is too long. Must be 20 characters or less.");
+        // If name is too long it will give alert in innerHTML
+        document.getElementById("message").innerHTML =
+           "Invalid Input! Your full name is too long. Must be 20 characters or less.";
 
         return false; // Comment: Stop program
      }
 
-    // Comment: Get zip code input
+    // Get zip code input
     let zip = document.getElementById("zipCode");
     let zipCodeString = zip.value.trim();
 
-    // Comment: making sure input is only integers
+    // Making sure input is only integers
     let zipCodeInt = parseInt(zipCodeString);
     let parsedZipString = "" + zipCodeInt;
 
-      // Comment: Validate zip code is exactly 5 digits(no letters and no leading zeros
+      // Validate zip code is exactly 5 digits(no letters and no leading zeros
      if (zipCodeString.length !== 5 || 
          isNaN(zipCodeInt) ||
          (zipCodeString[0] !== "0" && parsedZipString.length !== 5)
          )
 
+         // Message for if the Zip code is invalid will give alert in innerHTML that need integers only
          {
-         alert("Invalid Zip Code. Please enter exactly 5 digits.");
+          document.getElementById("message").innerHTML = 
+             "Invalid Zip Code. Please enter exactly 5 digits.";
+
          return false; // Comment: Stop program
          }
 
@@ -48,10 +56,10 @@ function validateForm() {
      // Update header text   
     document.getElementById("headerText").innerHTML = "Ta-Da Here's The Big Secret!";    
 
-    // Comment: Get message output area
+    // Get message output area
     let msg = document.getElementById("message");
 
-    // Comment: Clear previous messages
+    // Clear previous messages
     msg.innerHTML = "";
 
   
