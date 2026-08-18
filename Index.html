@@ -1,15 +1,20 @@
-<!-- Zac McDaniel, 8/16/2026 
-     Assignment 6.2 - Putting it all together-->
- <!--DOCTYPE this is the first tag on the page and it tells the browser that this is an HTML5 page -->
+<!-- Zac McDaniel, 8/17/2026-->
+ <!-- Assignment 7.2, Final Project - A Web Presence-->
+
+  <!--DOCTYPE this is the first tag on the page and it tells the browser that this is an HTML5 page -->
  <!DOCTYPE html>
  <!-- the html tag wraps the entire webpage -->
- <html>
+ <html> 
     
-    <!-- the head section has info for the browser and search engine  -->
+     <!-- the head section has info for the browser and search engine  -->
      <head>
-      <!-- Title shown in the browser tab -->
-       <title>CSC102 Home Page</title> 
 
+       <!-- System provided metadata: descibes user's open edge tabs-->
+       <meta charset="UTF-8">
+
+       <!-- Title shown in the browser tab -->
+       <title>Welcome To My Home Page!</title> 
+       
        <!--add a link to my css file-->
        <link rel="stylesheet"  href="main.css">
      </head>
@@ -17,58 +22,54 @@
      <!-- the body section holds the text and images that we want to show to the user -->
       <body>
         
-          <!-- Navigation menu on the left side of the page -->
-          <nav>
+           <!-- Navigation menu on the left side of the page -->
+           <nav>
 
-            <!--Link to the home page -->
-           <a id="memeLink" href="Index.html">Meme</a>
-           <br>
-           <!--Link to the boards page -->
-           <a id="boardsLink" href="Boards.html">Boards</a>
-           <br> 
-           <!-- Link to my Game page -->
-            <a id="gameLink" href="Game.html">Game</a>
-            <br>
-           <!-- Link to my Strings page -->
-            <a id="stringsLink" href="Strings.html">Strings</a>
-           <br>
-           <!-- Link to my Palindrome page -->
-            <a id="palLink" href="palindrome.html">Palindrome</a>
-            <br>
-           <!-- Link to my tables page -->
-           <a id="tablesLink" href="Table.html">Table</a>
-           <br>
+             <!-- Link to my home page-->
+             <a id="homeLink" href="Index.html">Home</a>
+             <br>           
+             <!--Link to the boards page -->
+             <a id="boardsLink" href="Boards.html">Boards</a>
+             <br>
+             <!--Link to the meme page -->
+             <a id="memeLink" href="meme.html">Meme</a>
+             <br> 
+             <!-- Link to my Game page -->
+             <a id="gameLink" href="Game.html">Game</a>
+             <br>
+             <!-- Link to my Strings page -->
+             <a id="stringsLink" href="Strings.html">Strings</a>
+             <br>
+             <!-- Link to my Palindrome page -->
+             <a id="palLink" href="palindrome.html">Palindrome</a>
+             <br>
+             <!-- Link to my tables page -->
+             <a id="tablesLink" href="Table.html">Table</a>
+             <br>
+    
+             <!--Message area updated using innerHTML (required by assignment)
+                 No alerts allowed-->
+             <div id="messageBox"></div>
 
+             <!-- add autoplay audiowith source -->
+             <audio id="3dprinterAudio"  autoplay loop >
+             <source src="3d printer.mp3" type="audio/mpeg">
+             </audio>
 
-           <!-- Start and stop buttons-->
-           <button id="startBtn">Start</button>   <br>        
-           <button id="stopBtn">Stop</button> <br>
-
-           <!--Message area updated using innerHTML (required by assignment)
-            No alerts allowed-->
-           <div id="messageBox"></div>
-
-           <!-- add autoplay audiowith source -->
-           <audio id="guitarAudio" loop >
-             <source src="guitar_loop.mp3" type="audio/mpeg">
-           </audio>
-
-          </nav>
+           </nav>
 
          <main>
 
          <!-- Main heading at the top of the page -->
-         <h1>Welcome to my CSC102 Home Page</h1>
+         <h1>Welcome to my Home page!</h1>
+          <br>
+          <br>
+         <h2>CSC 102- Intro To Programming!</h2>
+          <br>
+          <br>
+         <h3> Hi! my name is Zac Mcdaniel, and I am currently learning to better my education!
+            This is my webpage so you may see what I have learned this semester!"</h3>
 
-         <p id="startHint">Click the Start button to start the meme moving and see what happens."</p>
-       
-         <!-- p is for paragraph tag; has spacing around it by default -->
-         <p>
-            <!-- ID is required so JavaScript can access and move it -->
-            <img class="responsive" id="memeImage" 
-            src="3D printing meme.jpg" alt="3D Print meme">         
-         </p>              
-          
         </main>       
 
         <!--Load external JavaScript file-->
