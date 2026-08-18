@@ -15,8 +15,6 @@ Start/Stop controls
 
 Audio playback
 
-A double‑click Easter‑egg message
-
 A styled table with alternating rows and hover effects
 
 Clean layout using Flexbox and z‑index layering
