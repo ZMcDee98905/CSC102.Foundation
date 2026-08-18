@@ -1,8 +1,8 @@
-// Zac McDaniel, 8/6/2026
-// Assignment 6.2 - Putting it all together
+// Zac McDaniel, 8/17/2026
+// Assignment 6.2 - Puting it all together
 // This script controls the Start/Stop buttons and moves the meme img around the page.
 
-// Global variable to hold the interval ID for movement
+// Global variables for MEME PAGE to hold the interval ID for movement
 //Records when animation starts
 let startTime;
 
@@ -13,9 +13,10 @@ let animationRunning = false;
 let dirX =1;
 let dirY =1;
 
-// Actual position of the meme image
-let posX = 400;
-let posY = 200;
+// Starting horizontal position, just next to my Nav panel.
+let posX = 500;
+// Starting vertical position
+let posY = 350 ; 
 
 //Function runs when the Start button is clicked
 function startMove() {
@@ -60,6 +61,7 @@ function stopMove() {
     document.getElementById("messageBox").innerHTML = "Meme stopped.";
 
 }
+
 function flashColor() {
     const meme = document.getElementById("memeImage");
 
@@ -87,6 +89,10 @@ function moveMeme(timestamp) {
     // Get the meme image element
     const meme = document.getElementById("memeImage");
 
+    // Get the width of MAIN instead of the whole window
+    const main = document.querySelector("main");
+    const rightLimit = main.getBoundingClientRect().width;
+
     // horizontal movement
     let speedX = 3 * dirX;
     // vertical movement
@@ -98,26 +104,40 @@ function moveMeme(timestamp) {
     
     // Bounce off left edge
     if (posX <= 0) {
-    posX = 10;          // push away from wall
-    dirX *= -1;
-    flashColor();
+        posX = 10;          // push away from wall
+        dirX *= -1;
+        flashColor();  // Flash color on bounce
     }
 
-    // Bounce off right edge
-    if (posX + meme.width >= window.innerWidth) {
-    posX = window.innerWidth - meme.width - 10;  // push away
-    dirX *= -1;
-    flashColor();
-    }
-
-    // Bounce off top/bottom edges
-    if (posY <= 0 || posY + meme.height >= window.innerHeight) {
-        dirY *= -1; // Reverse vertical direction
+    // Right bounce - updated to use rightLimit
+    if (posX + meme.offsetWidth >= window.innerWidth) {
+        // Push away from edge
+        posX = window.innerWidth - meme.offsetWidth -10;  
+        dirX *= -1;
         flashColor(); // Flash color on bounce
     }
 
+    // Bounce off top
+    if (posY <= 0) {
+        posY = 10
+        dirY *=-1
+        flashColor();
+    }
+
+    // Calculate the lowest Y position the meme can reach (bottom of the screen)
+    const bottomLimit = window.innerHeight - meme.offsetHeight - 10
+
+    // Bounce off bottom
+    if (posY >= bottomLimit) {
+        posY = bottomLimit;
+        dirY *= -1;
+        flashColor();
+    }
+    
+    //
     // Apply movement using CSS transform
-    meme.style.transform = `translate(${posX}px, ${posY}px)`;
+    meme.style.left = `${posX}px`;
+    meme.style.top =  `${posY}px`;
 
     // Continue the animation loop if still running
     if (animationRunning) {
@@ -153,8 +173,10 @@ document.getElementById("stopBtn").onclick = function() {
 
 //Meme image click
 document.getElementById("memeImage").onclick = function() {
+    // Start movement + audio
     restartAudio();
     startMove();
+    
 };
 
 // Boards link stops audio before navigating
@@ -165,4 +187,15 @@ document.getElementById("boardsLink").onclick = function() {
 // Home link blur to remove highlight
 document.getElementById("homeLink").onclick = function() {
     this.blur(); // Remove focus from the link
-}
+};
+
+// Lower the volume of my Meme page audio
+window.onload = function() {
+
+    let guitarAudio = document.getElementById("guitarAudio");
+
+    if (guitarAudio) {
+        guitarAudio.volume = 0.3;    // 30% volume 
+    }
+
+};
