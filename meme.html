@@ -1,0 +1,92 @@
+<!-- Zac McDaniel, 8/17/2026 
+     Assignment 6.2 - Putting it all together-->
+ <!--DOCTYPE this is the first tag on the page and it tells the browser that this is an HTML5 page -->
+ <!DOCTYPE html>
+ <!-- the html tag wraps the entire webpage -->
+ <html>
+    
+    <!-- the head section has info for the browser and search engine  -->
+     <head>
+       <!-- The character encoding of the document-->
+       <meta charset="UTF-8">
+
+       <!-- Title shown in the browser tab -->
+       <title>Welcome To My MEME Page!</title>      
+ 
+       <!--add a link to my css file-->
+       <link rel="stylesheet"  href="main.css">
+     </head>
+         
+      <!-- the body section holds the text and images that we want to show to the user -->
+      <body> 
+        
+        <!-- Navigation menu on the left side of the page -->
+       <nav>
+
+         <!-- Link to my home page-->
+         <a id="homeLink" href="Index.html">Home</a>
+         <br>           
+         <!--Link to the boards page -->
+         <a id="boardsLink" href="Boards.html">Boards</a>
+         <br>
+         <!--Link to the meme page -->
+         <a id="memeLink" href="meme.html">Meme</a>
+         <br> 
+         <!-- Link to my Game page -->
+         <a id="gameLink" href="Game.html">Game</a>
+         <br>
+         <!-- Link to my Strings page -->
+         <a id="stringsLink" href="Strings.html">Strings</a>
+         <br>
+         <!-- Link to my Palindrome page -->
+         <a id="palLink" href="palindrome.html">Palindrome</a>
+         <br>
+         <!-- Link to my tables page -->
+         <a id="tablesLink" href="Table.html">Table</a>
+         <br>
+
+         <!-- Start and stop buttons-->
+         <button id="startBtn">Start</button>   <br>        
+         <button id="stopBtn">Stop</button> <br>
+
+         <!--Message area updated using innerHTML (required by assignment)
+         No alerts allowed-->
+         <div id="messageBox"></div>
+
+         <!-- add autoplay audiowith source -->
+         <audio id="guitarAudio" loop >
+         <source src="guitar_loop.mp3" type="audio/mpeg">
+         </audio>
+       </nav> 
+
+       <!-- Meme ID is required so JavaScript can access and move it -->
+       <img class="responsive" id="memeImage" 
+       src="3D printing meme.jpg" alt="3D Print meme">
+                  
+         <main>       
+           
+           <!-- Main heading at the top of the page -->
+           <h1>Welcome to my Meme page!</h1>
+
+           <!-- p is for paragraph tag; has spacing around it by default -->
+           <!-- My next message to the user -->
+           <p id="startHint">Click the Start button to start the meme moving and see what happens."</p>
+           
+           <!-- Meassage to get Meme to go faster if called-->
+           <h3>Want to speed things up? Try double clicking the Meme!</h3>           
+         </main>         
+         
+         <!--Load external JavaScript file-->
+         <script src="script.js"></script>
+
+         <!--add a footer to my body with my name and school info-->
+         <footer>
+           Zachary McDaniel<br>
+           University of Advancing Technology<br>          
+           2625 W Baseline Rd<br>
+           Tempe, AZ 85283<br>
+           3D Maker and Fabrication Degree<br>
+         </footer>    
+         
+      </body>
+</html>
