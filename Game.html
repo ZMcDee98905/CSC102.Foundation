@@ -1,4 +1,4 @@
-<!--Zachary McDaniel, 8/16/2026-->
+<!--Zachary McDaniel, 8/17/2026-->
 <!--tells browser this is a HTML5 document-->
 <!DOCTYPE html>
 
@@ -10,6 +10,9 @@
     <!--sets the title that appears on the web brower tab-->
     <title>Even or Odd Duel</title>
 
+    <!-- The character encoding of the document-->
+    <meta charset="UTF-8">
+
     <!--Link to external CSS file -->
     <link rel="stylesheet" href="main.style.css">
 </head>
@@ -19,21 +22,24 @@
     <main>
         <nav>
 
-          <!--Link to the home page -->
-           <a id="memeLink" href="Index.html">Meme</a>
+            <!-- Link to my home page-->
+           <a id="homeLink" href="Index.html">Home</a>
            <br>
            <!--Link to the boards page -->
            <a id="boardsLink" href="Boards.html">Boards</a>
            <br> 
+           <!--Link to the Meme page -->
+           <a id="memeLink" href="meme.html">Meme</a>
+           <br>
            <!-- Link to my Game page -->
-            <a id="gameLink" href="Game.html">Game</a>
-            <br>
+           <a id="gameLink" href="Game.html">Game</a>
+           <br>
            <!-- Link to my Strings page -->
-            <a id="stringsLink" href="Strings.html">Strings</a>
+           <a id="stringsLink" href="Strings.html">Strings</a>
            <br>
            <!-- Link to my Palindrome page -->
-            <a id="palLink" href="palindrome.html">Palindrome</a>
-            <br>
+           <a id="palLink" href="palindrome.html">Palindrome</a>
+           <br>
            <!-- Link to my tables page -->
            <a id="tablesLink" href="Table.html">Table</a>
            <br>
@@ -45,13 +51,33 @@
      <!-- Form required by assignment -->
      <!-- User enters a number, and the game compares it to a random number -->
      <form onsubmit="runGame(); return false;">
-        <!-- Input field for the user's number -->
-        <label>Enter a number:</label>
-        <input type="number" id="userNumber">
+          <!-- Input field for the user's number -->
+          <label>Enter a number:</label>
+          <input type="number" id="userNumber">
 
-        <!-- Submit button that triggers the game function -->
-        <input type="submit" value="Play Duel">
+          <!-- Submit button that triggers the game function -->
+          <input type="submit" value="Play Duel">
      </form>
+
+      <br>
+      <br>
+      <br>
+
+     <!-- Rules tile -->
+     <h2>Rules</h2>
+
+      <br>
+      <br>
+     
+      <!-- The rules to my game -->
+     <p>!To win you need to get the same as the computer!</p>
+
+     <p>Whether that be even or odd.</p>
+
+     <p>!!If you guess opposite then you Lose!!</p>
+       
+      <br>
+      <br>
 
      <!-- Area where results will be printed using innerHTML -->
      <p id="results"></p>
