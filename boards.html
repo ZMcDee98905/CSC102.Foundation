@@ -1,4 +1,4 @@
-<!-- Zac McDaniel, 8/6/2026 -->
+<!-- Zac McDaniel, 8/17/2026 -->
  <!-- Assignment 6.2 - Putting it all together -->
  <!--DOCTYPE this is the first tag on the page and it tells the browser that this is an HTML5 page -->
  <!DOCTYPE html>
@@ -6,38 +6,44 @@
  <html>
     <!-- the head section has info for the browser and search engine  -->
      <head>
+       <!-- System provided metadata: descibes user's open edge tabs-->
+       <meta charset="UTF-8">
+
+       <!-- This is the title page or Browser tab info-->
        <title>CSC102 Boards Page</title>       
        
        <!--add a link to my css file-->
        <link rel="stylesheet" href="main.css">
-     </head>
-     
+     </head>     
 
      <!-- the body section holds the text and images that we want to show to the user -->
-      <body>
-       
+     <body>       
 
-        <!--create a nav section to hold the menu-->
-         <nav> 
-          <!-- Link to my Index page -->
-          <a id="indexLink" href="Index.html">Home</a>
-          <br>
-          <!-- Link to my Boards page -->
-          <a id="boardsLink" href="Boards.html">Boards</a>
-          <br>
-          <!-- Link to my Game page -->
-          <a id="gameLink" href="Game.html">Game</a>
-          <br>           
-          <!-- Link to my Strings page -->
-          <a id="stringsLink" href="Strings.html">Strings</a>
-          <br>
-          <!-- Link to my Palindrome page -->
-          <a id="palLink" href="palindrome.html">Palindrome</a>
-          <br>
-          <!-- Link to my tables page -->
-          <a id="tablesLink" href="Table.html">Table</a>
-          <br>
-         </nav>
+       <!--create a nav section to hold the menu-->
+       <nav> 
+       
+         <!-- Link to my home page-->
+         <a id="homeLink" href="Index.html">Home</a>
+         <br>          
+         <!-- Link to my Boards page -->
+         <a id="boardsLink" href="Boards.html">Boards</a>
+         <br>
+         <!-- Link to my Meme page -->
+         <a id="memeLink" href="meme.html">Meme</a>
+         <br>
+         <!-- Link to my Game page -->
+         <a id="gameLink" href="Game.html">Game</a>
+         <br>           
+         <!-- Link to my Strings page -->
+         <a id="stringsLink" href="Strings.html">Strings</a>
+         <br>
+         <!-- Link to my Palindrome page -->
+         <a id="palLink" href="palindrome.html">Palindrome</a>
+         <br>
+         <!-- Link to my tables page -->
+         <a id="tablesLink" href="Table.html">Table</a>
+         <br>
+       </nav>
 
          <!-- add autoplay audio with source -->
            <audio id="introAudio" autoplay  >
@@ -62,6 +68,8 @@
            <p>5.Demonstrate the ability to effectively implement embedded systems and fundamental electronics into product builds.</p>
            
            <p>6.Place prototypes and builds within the Agile and MVP development frameworks.</p>
+
+           <script src="boards.script.js"></script>
            
         </main>
 
