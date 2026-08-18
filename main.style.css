@@ -45,6 +45,36 @@ nav{
    
 }
 
+form{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    margin-left: 200px;
+}
+
+/* Header content */
+h1{
+    text-align: center;
+    color: #000300;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+h2{
+    text-align: center;
+    color: #000300;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+p{
+    margin-left: 250px;
+    text-align: center;
+    color: #000300;
+    font-family: 'Courier New', Courier, monospace; 
+    font-weight: bolder; 
+   }
+
 /* footer styling */
 footer{
     position: fixed;         /* fixed position */
